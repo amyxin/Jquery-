@@ -1,4 +1,4 @@
-参考资料：[https://www.jianshu.com/p/59bc62880039](https://www.jianshu.com/p/59bc62880039 "test")
+参考资料：https://www.jianshu.com/p/59bc62880039
 文件名：rsingleTag.js
 
 正则表达式： /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i
