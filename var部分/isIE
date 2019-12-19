@@ -1,0 +1,15 @@
+isIE
+
+Jquery源代码为：
+import document from "./document.js";
+export default document.documentMode;
+   
+   
+documentMode 属性返回浏览器渲染文档的模式。
+IE8 使用不同方式渲染页面，基于 !DOCTYPE 或者某些存在的HTML元素。
+这些元素返回值如下:
+5 - 页面在 IE5 模式下展示
+7 - 页面在 IE7 模式下展示
+8 - 页面在 IE8 模式下展示
+9 - 页面在 IE9 模式下展示
+注意：如果没有指定 !DOCTYPE , IE8 以 IE5 模式渲染页面。
