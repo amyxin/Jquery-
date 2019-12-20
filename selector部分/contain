@@ -1,0 +1,27 @@
+源码:
+
+jQuery.contains = function( a, b ) {
+
+	var adown = a.nodeType === 9 ? a.documentElement : a,   //判断节点a是否为文档节点
+
+		bup = b && b.parentNode;  //返回b的父节点
+
+
+
+	return a === bup || !!( bup && bup.nodeType === 1 && (  //判断a与b的父节点是否相同
+
+
+
+		// Support: IE 9 - 11+
+
+		// IE doesn't have `contains` on SVG.
+
+		adown.contains ?  //判断contain方法是否存在
+
+			adown.contains( bup ) :   
+
+			a.compareDocumentPosition && a.compareDocumentPosition( bup ) & 16    //判断是否存在compareDocumentPosition方法，如果判断进行&计算，如果为16说明a元素包括b元素
+
+	) );
+
+};
